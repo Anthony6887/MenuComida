@@ -1,4 +1,5 @@
 # AppMenuComida
+<img src="https://github.com/ArmijosThais/ArmijosThais/assets/109778441/1103bc24-d026-447a-9ec8-6f9fd99bda28">
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
 

@@ -1,0 +1,24 @@
+<div class="contenedor">
+<div class="row">
+    <div class="col-md-4 p-4" *ngFor="let photo of photos">
+        <div class="card card-photo">
+            <div class="card-header">
+                {{photo.title}}
+            </div>
+            <div class="card-header">
+
+                <div>
+                   
+                        <app-star-rating ></app-star-rating>
+                   
+                </div>
+            </div>
+            <img [src]="'http://localhost:3001/' + photo.imagePath" class="img-card-top w-100" style="width: 300px; height: 300px;">
+            <div class="card-body">
+                <p>{{photo.description}}</p>
+            </div>
+        </div>
+    </div>
+    
+</div>
+</div>

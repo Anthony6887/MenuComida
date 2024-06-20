@@ -1,0 +1,73 @@
+<div class="contenedor">
+
+
+<header id="page-header">
+    <div class="container">
+        <h1>Carrito</h1>
+    </div>
+</header>
+
+<section class="padded">
+    <div class="container">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Platillo</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of listaItemCarrito">
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.precio | number: '.2'}}</td>
+                    <td>{{item.cantidad}}</td>
+                    <td>{{calcularSubtotal(item) | number: '.2'}}</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4" class="text-end">Total del Carrito:</td>
+                    <td>{{calcularTotal() | number: '.2'}}</td>
+                </tr>
+            </tfoot>
+        </table>
+        <button class="btn btn-danger" (click)="vaciarCarrito()">Vaciar Carrito</button>
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#pagoModal">Realizar el
+            Pago</button>
+
+
+    </div>
+</section>
+<div class="modal fade" id="pagoModal" tabindex="-1" aria-labelledby="pagoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="pagoModalLabel">Detalles de Pago</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form (ngSubmit)="realizarPago()">
+                    <div class="mb-3">
+                        <label for="total" class="form-label">Total de la Factura</label>
+                        <input type="text" class="form-control disabled-input disabled-input-border" id="total"
+                            value="{{ totalCarrito.toFixed(2) }}"/>
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="metodoPago" class="form-label">Método de Pago</label>
+                        <select class="form-select" id="metodoPago" [(ngModel)]="metodoPago" name="metodoPago" required>
+                            <option value="efectivo">Efectivo</option>
+                            <option value="tarjeta">Tarjeta</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Pagar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

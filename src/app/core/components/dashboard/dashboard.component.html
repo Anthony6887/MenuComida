@@ -1,0 +1,59 @@
+<div class="contenedor">
+  <div class="container mt-2 text-center">
+    <h2>PLATILLOS</h2>
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" name="filtro" placeholder="Search" aria-label="Search"
+        [(ngModel)]="filtro">
+    </form>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Titulo</th>
+          <th scope="col">Descripcion</th>
+          <th scope="col">Imagen</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col">Calificación</th>
+          <th scope="col">Compra</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of listProduct | filtro:filtro">
+          <td>{{ item.name }}</td>
+          <td>{{ getPhotoTitle(item.image!) }}</td>
+          <td>{{ getPhotoDescription(item.image!) }}</td>
+          <td>
+            <ng-container *ngFor="let photo of photos">
+              <ng-container *ngIf="item.image === photo.id">
+                <img [src]="'http://localhost:3001/' + photo.imagePath" class="img-card-top img-thumbnail"
+                  style="max-width: 300px; max-height: 100px;">
+              </ng-container>
+            </ng-container>
+          </td>
+          <td>{{ item.precio }}</td>
+          <td>{{ item.cantidad }}</td>
+          <td><app-star-rating [rating]="item.rating"></app-star-rating></td>
+          <td><i (click)="addCarrito(item)" class="fas fa-shopping-cart"></i></td>
+        </tr>
+      </tbody>
+    </table>
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center mt-4">
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<h1>FAST-FOOT</h1>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <button class="nav-link active fs-4 "(click)="dashboard()">Restaurante</button>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <button class="btn btn-outline-dark btn-lg" aria-current="page" (click)="calificaciones()"><i class="fas fa-star"></i> Calificacion</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-outline-dark btn-lg" aria-current="page" (click)="carrito()"><i class="fas fa-shopping-cart"></i> Carrito</button>
+          </li>
+        </ul>
+      </div>
+      
+      <button class="btn btn-outline-dark btn-lg" (click)="logOut()" type="button">Cerrar Sesion</button>     
+    </div>
+    
+  </nav>

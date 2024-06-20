@@ -1,0 +1,13 @@
+button{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.navbar{
+    background-color: rgb(92, 91, 91)!important;
+}
+h1{
+    text-align: center;
+    background-color: rgb(238, 108, 108)!important;
+    color: white;
+    font-family: 'Roboto';
+}

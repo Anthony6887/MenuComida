@@ -1,0 +1,17 @@
+/* En tu archivo de estilos CSS */
+.disabled-input {
+    color: #ff0000; /* Cambia el color del texto a rojo */
+    background-color: #f8f9fa; /* Fondo más claro */
+    cursor: not-allowed; /* Cambia el cursor a 'no permitido' */
+}
+
+/* Si lo deseas, puedes agregar estilos específicos para el borde */
+.disabled-input-border {
+    border: 1px solid #ddd; /* Agrega un borde más claro */
+    border-radius: 4px; /* Ajusta el radio de borde si es necesario */
+}
+
+.contenedor{
+    
+    height: 100vh;
+}

@@ -1,0 +1,52 @@
+<div class="wrapper">
+<div class="contenido">
+    <div *ngIf="!loading" class="body">
+        <img class="logo" src="../../../../assets/img/login.svg" alt="img login">
+        <h3>Registrar Usuario</h3>
+        <div class="form-floating mb-3 mt-3">
+            <input type="text" [(ngModel)]="fname" class="form-control" placeholder="Ingrese Nombre">
+            <label>Nombre</label>
+        </div>
+        <div class="form-floating mb-3 mt-3">
+            <input type="text" [(ngModel)]="lname" class="form-control" placeholder="Ingrese Apellido">
+            <label>Apellido</label>
+        </div>
+        <div class="form-floating mb-3 mt-3">
+            <input type="text" [(ngModel)]="username" class="form-control" placeholder="Ingrese Usuario">
+            <label>Usuario</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" [(ngModel)]="password" class="form-control" placeholder="Ingrese Contraseña">
+            <label>Contraseña</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" [(ngModel)]="confirmPassword" class="form-control" placeholder="Ingrese Contraseña nuevamente">
+            <label>Repetir Contraseña</label>
+        </div>
+        <div class="form-floating mb-3 mt-3">
+            <input type="email" [(ngModel)]="email" class="form-control" placeholder="Ingrese Email" required>
+            <label>Email</label>
+        </div>
+        <div class="form-floating mb-3 mt-3">
+            <input type="number" [(ngModel)]="age" class="form-control" placeholder="Ingrese Edad">
+            <label>Edad</label>
+        </div>
+        <div class="form-floating mb-3">
+            <select [(ngModel)]="role" class="form-select">
+                <option value="Cliente">Cliente</option>
+                <option value="Empleado">Empleado</option>
+                <option value="Chef">Chef</option>
+                <option value="Gerente">Gerente</option>
+            </select>
+            <label>Rol</label>
+        </div>
+        <div class="d-grid gap-2 mb-3">
+            <button type="button"(click)="addUser()" class="btn btn-primary btn-lg">Aceptar</button>
+            <a routerLink="/login">Volver</a>
+        </div>        
+    </div>
+    <pmc-spinner *ngIf="loading"></pmc-spinner>
+</div>
+
+    
+</div>

@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+html, body{
+height: 100%;
+
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("/assets/img/fondo.jpg");
+    background-size: cover;
+    /* background-color: rgb(255, 202, 141); */
+   height: 100%;
+
+}
+.wrapper, h1{
+    color: white;
+}
+.wrapper, label{
+    color: black;
+}
+.contenido{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
+}
+.logo{
+ height: 130px;
+ margin-bottom: 10px;   
+
+}
+
+.body{
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+ 
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+

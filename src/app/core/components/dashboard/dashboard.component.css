@@ -1,0 +1,61 @@
+.contenedor{
+    background-image: url('/assets/img/platillos.jpg');
+    background-size: cover; 
+  background-position: center;
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat; 
+}
+.fas{
+  cursor: pointer;
+}
+h2 {
+  font-size: 36px; /* Tamaño de fuente grande */
+  color: #2e86de; /* Color del texto (azul, puedes ajustar el color) */
+  font-weight: bold; /* Peso de la fuente */
+  margin-bottom: 20px; /* Margen inferior */
+  text-transform: uppercase; /* Convertir texto a mayúsculas */
+  padding: 10px; /* Espaciado interno */
+  background-color: #f7f9fa; /* Color de fondo */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  /* Otros estilos que desees aplicar */
+}
+form.d-flex {
+  margin-bottom: 20px; /* Margen inferior */
+}
+.form-control:focus {
+  outline: none; /* Eliminar contorno al enfocar */
+  border-color: #2e86de; /* Color del borde al enfocar (azul, puedes ajustar el color) */
+  box-shadow: 0 0 0 0.15rem rgba(46, 134, 222, 0.25); /* Sombra al enfocar */
+}
+/* Estilos para la tabla */
+.table {
+  width: 100%; /* Ancho completo */
+  border-collapse: collapse; /* Colapso de bordes */
+  margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Estilos para las celdas de encabezado */
+.table thead th {
+  background-color: #2e86de; /* Color de fondo del encabezado (azul, puedes ajustar el color) */
+  color: #fff; /* Color del texto en el encabezado */
+  font-weight: bold; /* Peso de la fuente */
+  text-align: left; /* Alineación del texto */
+  padding: 12px; /* Espaciado interno */
+}
+
+/* Estilos para las filas alternas */
+.table tbody tr:nth-child(even) {
+  background-color: #f7f9fa; /* Color de fondo para filas alternas */
+}
+
+/* Estilos para las celdas de datos */
+.table tbody td {
+  padding: 10px; /* Espaciado interno */
+}
+
+/* Estilos para los botones dentro de la tabla */
+.table button {
+  margin-right: 5px; /* Margen derecho para separar botones */
+}
